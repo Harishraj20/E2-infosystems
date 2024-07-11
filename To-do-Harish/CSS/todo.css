@@ -1,0 +1,478 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    padding: 10% 25%;
+    background: linear-gradient(to right, #120b4b, #722626);
+    display: flex;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.Container {
+    width: 80%;
+    height: 100%;
+    margin-bottom: 2%;
+    background: linear-gradient(to right, #b5b2d1, #e6cece);
+    display: flex;
+    flex-direction: column;
+    border-radius: 5%;
+    transition: box-shadow 0.3s ease-in-out; 
+}
+
+.Container:hover {
+    box-shadow: 0 0 15px 4px rgba(249, 249, 250, 0.6);
+}
+
+.heading {
+    width: 100%;
+    height: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    padding: 5%;
+}
+
+.input {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.input input {
+    padding: 2%;
+    font-size: 15px;
+    width: 80%;
+    border: none;
+    background-color: rgb(239, 232, 232);
+}
+
+.addbutton {
+    color: #fffdfd;
+    padding: 2%;
+    font-size: 90%;
+    border: none;
+    background-color:hsl(253, 67%, 68%);
+    transition: all 1.5s ease;
+}
+
+p {
+    padding-left: 6%;
+    font-size: 15px;
+    width: 100%;
+    text-align: center;
+}
+
+.inputfield:focus {
+    outline: none;
+}
+
+.taskicon {
+    padding: 3% 10% 0 10%;
+    width: 100%;
+    height: 10%;
+    margin-bottom: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.buttons {
+    color: #201250;
+    margin-left: 3%;
+    padding: 2%;
+    font-size: large;
+    text-align: center;
+    flex: 1;
+    cursor: pointer;
+    position: relative;
+    background: transparent;
+    border: none;
+}
+.buttons.active {
+    color: #4b1b1b;
+}
+
+.buttons::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 4px;
+    background-color: #722626;
+    bottom: 0;
+    left: 0;
+    transition: all 0.5s ease;
+}
+
+.buttons.active::after {
+    width: 100%;
+}
+.taskCheckbox [type ='checkbox']{
+    width: 50px;
+    height: 15px;
+    border-radius: 25px;
+    background: transparent;
+}
+
+
+.clearbutton {
+    padding: 2%;
+    font-size: large;
+    margin-left: 3%;
+    background-color: hsl(253, 67%, 68%);
+    text-align: center;
+    color: white;
+    border: none;
+    width: 16%;
+}
+
+.addbutton:hover {
+    background-color: #16113b;
+}
+ol{
+    height: 55%;
+    width: 100%;
+}
+
+.Tasklist {
+    width: 95%;
+    padding-right: 8%;
+    padding-left: 14%;
+    height: 55%;
+    overflow: auto;
+}
+
+.Listelements {
+    padding: 2%;
+    width: 100%;
+    height: 30%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    background: linear-gradient(to right, #b5b2d1, #e6cece);
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.taskCheckbox {
+    width: 10%;
+}
+
+.check {
+    width: 10%;
+    padding-left: 0%;
+    padding-right: 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*No taskk image css property*/
+.no-tasks-image {
+    width: 55%;
+    mix-blend-mode: multiply;
+    
+    display: block;
+    margin: auto;
+    background: linear-gradient(to right, #b5b2d1, #e6cece);
+    border-radius: 5%;
+}
+
+.taskname {
+        width: 70%; 
+        font-size: 20px; 
+        align-items: center;
+        padding-left: 2%;
+        overflow: hidden;
+        white-space: nowrap; 
+        text-overflow: ellipsis; 
+    
+}
+
+.Deletebutton, .editbutton {
+    width: 10%;
+}
+
+.editbutton button, .Deletebutton button {
+    font-size: larger;
+    height: 100%;
+    width: 100%;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+
+}
+
+
+.edit-input {
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+    border: none;
+    background: transparent;
+    width: 100%;
+    outline: none;
+}
+ol{
+    list-style-type: none;
+}
+
+/*scroll bar property*/
+.Tasklist::-webkit-scrollbar {
+    width: 12px;
+    height: 12px; 
+}
+
+.Tasklist::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+    border-radius: 5px; }
+
+.Tasklist::-webkit-scrollbar-thumb {
+    background: hsl(253, 67%, 68%); 
+    border-radius: 10px; 
+}
+
+.Tasklist::-webkit-scrollbar-thumb:hover {
+    background: hsl(253, 67%, 68%); 
+}
+
+@media (max-width :325px){
+    html, body {
+        width: 100%;
+        height: 100%;
+    }
+    body {
+    padding: 25% 3%;}
+    
+.Container {
+    width: 95%;
+    height: 60%;
+}
+h1{
+    padding: 0%;
+}
+    .taskicon {
+        height: 40%;
+        padding: 0%;
+        display: flex;
+        flex-direction: column;
+    }
+    .Tasklist{
+        height: 35%;
+    }
+    .clearbutton{
+        margin-top: 3%;
+        width: 35%;
+    }
+    .Tasklist {
+        width: 100%;
+        padding-right: 2%;
+        padding-left: 2%;
+    }
+    .Deletebutton, .editbutton {
+        width: 25%;
+    }
+    .no-tasks-image {
+        width: 50%;
+    }
+    
+
+}
+@media (min-width: 326px) and (max-width : 483px){
+    .Container {
+        width: 95%;
+        height: 75%;
+    }
+    
+body {
+    padding: 25% 5%;
+}
+
+.taskicon {
+    padding: 3% 5% 0 5%;
+    width: 95%;
+}
+.Deletebutton, .editbutton {
+    width: 30%;
+}
+
+.taskname {
+    width: 80%;
+}
+.clearbutton {
+    padding: 0%;
+}
+
+.Tasklist {
+    width: 100%;
+    margin-top: 5%;
+    padding-right: 5%;
+    padding-left: 5%;
+}   
+ .no-tasks-image {
+    width: 75%;
+
+
+}
+}
+
+@media (min-width: 435px ) and (max-width : 768px){
+    .Container {
+        width: 80%;
+        height: 85%;
+
+
+    }
+    
+body {
+    padding: 25% 5%;
+}
+
+.taskicon {
+    padding: 3% 5% 0 5%;
+    width: 95%;
+}
+.Deletebutton, .editbutton {
+    width: 30%;
+}
+
+.taskname {
+    width: 80%;
+}
+
+.Tasklist {
+    width: 100%;
+    margin-top: 5%;
+}
+.buttons {
+    margin-left: 0%;
+    padding: 1%;
+}
+.clearbutton {
+    padding: 1%;
+    margin-left: 3%;
+    width: 17%;
+}
+.no-tasks-image {
+    width: 40%;
+    mix-blend-mode: multiply;
+    display: block;
+    margin: auto;
+    background: linear-gradient(to right, #b5b2d1, #e6cece);
+    border-radius: 5%;
+}
+}
+
+
+
+
+@media (min-width: 768px ) and (max-width : 1025px){
+    .Container {
+        width: 75%;
+        height: 95%;
+    }
+    
+    body {
+        padding: 15% 0%;
+    }
+
+.taskicon {
+    padding: 3% 5% 0 5%;
+    width: 95%;
+}
+.Deletebutton, .editbutton {
+    width: 30%;
+}
+
+.taskname {
+    width: 80%;
+}
+
+.Tasklist {
+    padding-right: 8%;
+    width: 93%;
+}
+.buttons {
+    margin-left: 0%;
+    padding: 1%;
+}
+.clearbutton {
+    padding: 1%;
+    margin-left: 3%;
+    width: 17%;
+}
+.no-tasks-image {
+    width: 53%;
+    mix-blend-mode: multiply;
+    display: block;
+    margin: auto;
+    background: linear-gradient(to right, #b5b2d1, #e6cece);
+    border-radius: 5%;
+}
+}
+
+
+
+@media (min-width: 1025px ) and (max-width : 1440px){
+    .Container {
+        width: 50%;
+        height: 100%;
+    }
+    
+    body {
+        padding: 10% 5%;
+    }
+
+.taskicon {
+    padding: 3% 10% 0 6%;
+    width: 100%;
+}
+
+
+.taskname {
+    width: 70%;
+}
+.Tasklist {
+    width: 95%;
+}
+.buttons {
+    margin-left: 0%;
+    padding: 1%;
+}
+.clearbutton {
+    padding: 1%;
+    margin-left: 3%;
+    width: 17%;
+}
+.no-tasks-image {
+    width: 50%;
+    mix-blend-mode: multiply;
+    display: block;
+    margin: auto;
+    background: linear-gradient(to right, #b5b2d1, #e6cece);
+    border-radius: 5%;
+}
+}
+
+
+.editbutton button,
+.Deletebutton button {
+    font-size: larger;
+    height: 100%;
+    width: 100%;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+
+
